@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/my_custom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/tvplayerlabel"
+            style="@style/Theme.Tictactoe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="68dp"
+            android:text="player 1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/tvplayerlabel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="8dp"
+            android:text="player 2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvplayerlabel"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvplayer"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="8dp"
+            android:text="0"
+            app:layout_constraintStart_toEndOf="@+id/tvplayerlabel"
+            app:layout_constraintTop_toTopOf="@+id/tvplayerlabel" />
+
+        <TextView
+            android:id="@+id/tvplayer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="0"
+            app:layout_constraintStart_toEndOf="@+id/tvplayerlabel2"
+            app:layout_constraintTop_toTopOf="@+id/tvplayerlabel2" />
+
+        <Button
+            android:id="@+id/btn00"
+            android:layout_width="85dp"
+            android:layout_height="74dp"
+            android:onClick="DoTurn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.239"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.261"
+            tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn10"
+            android:layout_width="85dp"
+            android:layout_height="74dp"
+            android:onClick="DoTurn"
+            app:layout_constraintStart_toStartOf="@+id/btn00"
+            app:layout_constraintTop_toBottomOf="@+id/btn00"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn20"
+            android:layout_width="85dp"
+            android:layout_height="74dp"
+            android:onClick="DoTurn"
+            app:layout_constraintStart_toStartOf="@+id/btn10"
+            app:layout_constraintTop_toBottomOf="@+id/btn10"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn21"
+            android:layout_width="85dp"
+            android:layout_height="74dp"
+            android:onClick="DoTurn"
+            app:layout_constraintStart_toEndOf="@+id/btn20"
+            app:layout_constraintTop_toBottomOf="@+id/btn10"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn22"
+            android:layout_width="85dp"
+            android:layout_height="74dp"
+            android:onClick="DoTurn"
+            app:layout_constraintStart_toEndOf="@+id/btn21"
+            app:layout_constraintTop_toTopOf="@+id/btn21"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn11"
+            android:layout_width="85dp"
+            android:layout_height="74dp"
+            android:onClick="DoTurn"
+            app:layout_constraintStart_toEndOf="@+id/btn10"
+            app:layout_constraintTop_toBottomOf="@+id/btn00"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn12"
+            android:layout_width="85dp"
+            android:layout_height="74dp"
+            android:onClick="DoTurn"
+            app:layout_constraintStart_toEndOf="@+id/btn11"
+            app:layout_constraintTop_toTopOf="@+id/btn11"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn01"
+            android:layout_width="85dp"
+            android:layout_height="74dp"
+            android:onClick="DoTurn"
+            app:layout_constraintStart_toEndOf="@+id/btn00"
+            app:layout_constraintTop_toTopOf="@+id/btn00"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn02"
+            android:layout_width="85dp"
+            android:layout_height="74dp"
+            android:onClick="DoTurn"
+            app:layout_constraintStart_toEndOf="@+id/btn01"
+            app:layout_constraintTop_toTopOf="@+id/btn01"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/currentState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn21"
+            app:layout_constraintVertical_bias="0.109" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
