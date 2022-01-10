@@ -1,0 +1,28 @@
+initial_state=np.array(initial_state)
+j=0
+for i in initial_state:
+    if (i==1):
+        if(initial_state[j-1] == 0):
+            print(j)
+            initial_state[j-1]=initial_state[j]
+            initial_state[j]=0
+            print(initial_state)
+            if(initial_state[j-2]==2):
+                initial_state[j-2]=initial_state[j]
+                initial_state[j]=2
+                print(initial_state)
+                j-=2
+                print(j)
+                if(initial_state[j]==0):
+                    if(initial_state[j-1]==2):
+                        initial_state[j-1] = initial_state[j]
+                        initial_state[j]=2
+                        print(initial_state)
+                        print(j)
+                
+#     if (i==2):
+#         if(initial_state[j+1]==0):
+#             initial_state[j+1]=initial_state[j]
+#             initial_state[j]=0
+#             print(initial_state)
+    j+=1
